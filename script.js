@@ -1,12 +1,11 @@
 //TODO conseguir resolver o problema de passar o número da mesa para o elemento li dentro da ul
+//Resolvido
 const btn = document.getElementById("btn");
 const inputOrder = document.getElementById("inputOrder");
 const inputTable = document.getElementById("inputTable");
 const list = document.querySelector(".list");
-let allOrdersLister = [{
-    order: inputOrder.value,
-    table: inputTable.value
-}];
+// let allOrdersLister = [{}]; O erro estava no array com objeto vazio
+let allOrdersLister = [];
 //TODO IMPLEMENTARA ARRAY DE OBJETOS
 btn.addEventListener("click", (event) => {
 
@@ -22,27 +21,33 @@ function readOrder() {
     list.innerHTML = "";
     allOrdersLister.forEach((item, index) => {
         
-        let tableElement = document.createElement("h2");
+        // let tableElement = document.createElement("h2");
         let orderElement = document.createElement("li");
 
-        let tableText = document.createTextNode(item.table);
-        let orderText = document.createTextNode(item.order);
+        //Decidi criar um elemento de texto mais semãntico
+        // let orderText = document.createTextNode(item.order);
+        // let tableText = document.createTextNode(item.table);
+
+        orderElement.innerHTML = `<srtong>Mesa: ${item.table} - Pedido: ${item.order}</strong>`;
+
 
         let deleteOrder = document.createElement("a");
         deleteOrder.setAttribute("href", "#");
-        deleteOrder.classList("btnDelete");
+        deleteOrder.classList.add("btnDelete");
 
         let deleteText = document.createTextNode("X");
         deleteOrder.appendChild(deleteText);
 
-        let positionOrder = allOrdersLister.indexOf(allOrdersLister.order);
-        deleteOrder.setAttribute("onclick", `deleteOrder(${positionOrder})`);
+        // deleteOrder.setAttribute("onclick", `deleteOrder(${index})`);
+        //Arrow function é mais segura do que injetar como atributo? Teste
+        deleteOrder.onclick = () => deleteOrder(index);
 
-        tableElement.appendChild(tableText);
-        orderElement.appendChild(orderText);
-        orderElement.appendChild(tableElement);
+        // tableElement.appendChild(tableText);
+        // orderElement.appendChild(orderText);
+        // orderElement.appendChild(tableElement);
+
         orderElement.appendChild(deleteOrder);
-        allOrdersLister.appendChild(orderElement);
+        list.appendChild(orderElement);
 
     });
 };
@@ -81,7 +86,7 @@ function addOrder(){
         let newOrder =  inputOrder.value;
         let newTable = inputTable.value.trim();
 
-        allOrdersLister.push(newTable);
+        allOrdersLister.push({order: newOrder, table: newTable});
         inputOrder.value = "";
         inputTable.value = "";
 
