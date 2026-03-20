@@ -57,8 +57,6 @@ Destaques da Implementação:
 
 - [x] Refatoração do DOM: Corrigir a inserção dos elementos li dentro da ul principal.
 
-- [ ] Implementação de Regex: Adicionar validações mais robustas nos campos de entrada.
-
 - [ ] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
 
 

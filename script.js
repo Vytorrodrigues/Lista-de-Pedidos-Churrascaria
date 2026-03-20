@@ -48,21 +48,6 @@ function readOrder() {
     });
 };
 
-//TODO IMPLEMENTAR REGEX NA VERIFICAÇÃO
-function hasBlankSpace(){
-
-    const orderValue = inputOrder.value;
-    const tableValue = inputTable.value;
-    const regex = /\s/; //regex global
-    if (regex.test(tableValue) || regex.test(orderValue)) {
-        console.log("OK");
-        return true;
-    };
-
-    return false;
-    
-};
-
 //ADD order on list and error background in the input
 function addOrder(){
     //Alert
