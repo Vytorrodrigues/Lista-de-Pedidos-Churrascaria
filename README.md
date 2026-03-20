@@ -53,13 +53,13 @@ Destaques da Implementação:
 # ---🛠️ Próximos Passos (Roadmap)---
 - Atualmente, estou trabalhando nas seguintes melhorias:
 
-# [ ] Correção da Estrutura de Objetos: Ajustar a função addOrder para que ela envie um objeto completo { order, table } para a array, permitindo a leitura correta das propriedades.
+- [x] Correção da Estrutura de Objetos: Ajustar a função addOrder para que ela envie um objeto completo { order, table } para a array, permitindo a leitura correta das propriedades.
 
-# [ ] Refatoração do DOM: Corrigir a inserção dos elementos li dentro da ul principal.
+- [x] Refatoração do DOM: Corrigir a inserção dos elementos li dentro da ul principal.
 
-# [ ] Implementação de Regex: Adicionar validações mais robustas nos campos de entrada.
+- [ ] Implementação de Regex: Adicionar validações mais robustas nos campos de entrada.
 
-# [ ] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
+- [ ] Persistência de Dados: Implementar localStorage para que os pedidos não sumam ao atualizar a página.
 
 
 ## 🚀 Como Executar
