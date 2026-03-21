@@ -62,7 +62,7 @@ function addOrder(){
         alertIcon.appendChild(textAlert);
         main.appendChild(alertIcon);
 
-        if(main.childElementCount > 4 ){
+        if(main.childElementCount > 3 ){
             alertIcon.remove();
         }
 
@@ -98,7 +98,7 @@ function regexExcludeNumber(){
     inputTable.addEventListener("input", () => {
         let regexString = /\D/g;
         let valueString = inputTable.value.replace(regexString, "");
-        
+
         inputTable.value = valueString;        
     });
 };
