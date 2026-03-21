@@ -52,7 +52,7 @@ readOrder();
 //ADD order on list and error background in the input
 function addOrder(){
     //Alert
-    if (inputOrder.value.trim() === "" && inputTable.value.trim() === "") {
+    if (inputOrder.value.trim() === "" || inputTable.value.trim() === "") {
         let main = document.querySelector("main");
         let alertIcon = document.createElement("span");
 
@@ -95,34 +95,10 @@ function saveDate(){
 };
 
 function regexExcludeNumber(){
-    
     inputTable.addEventListener("input", () => {
-        let regexString = /\D+/g;
-        let regexBlankSpace = /\s+/g;
+        let regexString = /\D/g;
         let valueString = inputTable.value.replace(regexString, "");
-        let valueBlank = inputTable.value.replace(regexBlankSpace, "");
         
-        if( valueString == false){
-
-            let form = document.querySelector("form");
-            let reload = document.createElement("a");
-            let reloadText = document.createTextNode("Reload-Page");
-
-            btn.style.backgroundColor = "Grey";
-            btn.classList.add("disableBtn");
-            btn.disabled = true;
-
-            reload.appendChild(reloadText);
-            reload.setAttribute("href", "#");
-            reload.onclick = () => window.location.reload();
-            reload.classList.add("btnReload");
-            form.appendChild(reload);
-
-            
-            if (form.childElementCount > 4) {
-                reload.remove();
-            };
-        };
+        inputTable.value = valueString;        
     });
-
 };
