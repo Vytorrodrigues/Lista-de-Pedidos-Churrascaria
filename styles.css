@@ -9,6 +9,7 @@ box-sizing: border-box;
     --amarelo: #f1c45e;
     --amarelo-claro: #f8e1a6;
     --preto: #2b2b2bc2;
+    --verde: #66a040;
     --fundo: #fdf6e9;
 }
 
@@ -168,6 +169,32 @@ button:hover {
     margin: 0.2rem;
     border-radius: 2rem;
 }
+
+.btnReload{
+    user-select: none;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btnReload:hover {
+    background-color: var(--verde);
+    transform: translateY(-2px);
+}
+
+
+.disableBtn{
+    cursor: not-allowed;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
