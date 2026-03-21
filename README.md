@@ -25,37 +25,37 @@ Inicialmente, houve dificuldade em como armazenar os dados. Corrigi a lógica pa
 Correção: Implementei o push({order: newOrder, table: newTable}) para garantir a integridade dos dados.
 
 2. Ciclo de Vida do Dado (CRUD)
-- addOrder: Refatorei para incluir validações de strings vazias usando .trim(), evitando registros "fantasmas" na lista.
+addOrder: Refatorei para incluir validações de strings vazias usando .trim(), evitando registros "fantasmas" na lista.
 
-- readOrder: O maior desafio foi a renderização. Ajustei para que a lista seja limpa (innerHTML = "") antes de cada nova leitura, impedindo a duplicidade de itens na tela.
+readOrder: O maior desafio foi a renderização. Ajustei para que a lista seja limpa (innerHTML = "") antes de cada nova leitura, impedindo a duplicidade de itens na tela.
 
-- deleteOrder: Implementei a exclusão por index, garantindo que o usuário remova exatamente o pedido selecionado através do método splice.
+deleteOrder: Implementei a exclusão por index, garantindo que o usuário remova exatamente o pedido selecionado através do método splice.
 
 3. Manipulação Semântica do DOM
-- No JavaScript, optei por criar os elementos de forma dinâmica, mas mantendo a semântica:
+No JavaScript, optei por criar os elementos de forma dinâmica, mas mantendo a semântica:
 
-- Uso de <li> para cada item da lista.
+Uso de <li> para cada item da lista.
 
-- Criação de botões de exclusão com elementos <a> estilizados, injetando o comportamento de clique via onclick diretamente na criação do elemento.
+Criação de botões de exclusão com elementos <a> estilizados, injetando o comportamento de clique via onclick diretamente na criação do elemento.
 
 4. Tratamento de Dados com Regex
-- A aplicação utiliza Expressões Regulares (Regex) para validar a entrada de dados no campo de identificação da mesa (inputTable). Isso garante que o sistema não processe caracteres inválidos e mantenha a consistência do banco de dados local.
+A aplicação utiliza Expressões Regulares (Regex) para validar a entrada de dados no campo de identificação da mesa (inputTable). Isso garante que o sistema não processe caracteres inválidos e mantenha a consistência do banco de dados local.
 
--  Funcionamento da Validação
-- O filtro é aplicado em tempo real através do evento input. Sempre que o usuário digita um caractere, a função regexExcludeNumber entra em ação:
+Funcionamento da Validação
+O filtro é aplicado em tempo real através do evento input. Sempre que o usuário digita um caractere, a função regexExcludeNumber entra em ação:
 
-- Padrão Utilizado: /\D/g
+Padrão Utilizado: /\D/g
 
-- Ação: Substituição imediata por string vazia ("").
+Ação: Substituição imediata por string vazia ("").
 
 # 🎨 Design e UI
-- A estilização foi pensada para transmitir a energia de uma churrascaria:
+A estilização foi pensada para transmitir a energia de uma churrascaria:
 
-- Paleta de Cores: Tons de vermelho brasa e amarelo ouro.
+Paleta de Cores: Tons de vermelho brasa e amarelo ouro.
 
-- Feedback Visual: Inputs com transições de cor no foco e botões com efeito de elevação (translateY).
+Feedback Visual: Inputs com transições de cor no foco e botões com efeito de elevação (translateY).
 
-- Animações: Novos pedidos entram na lista com uma animação suave de fadeIn e deslize.
+Animações: Novos pedidos entram na lista com uma animação suave de fadeIn e deslize.
 
 # 💻 Tecnologias Utilizadas
 - HTML5: Estrutura semântica e formulários.
