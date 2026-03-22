@@ -34,7 +34,7 @@ Correção: Implementei o push({order: newOrder, table: newTable}) para garantir
 3. Manipulação Semântica do DOM
 - No JavaScript, optei por criar os elementos de forma dinâmica, mas mantendo a semântica:
 
-- Uso de <li> para cada item da lista.
+- Uso de li para cada item da lista.
 
 - Criação de botões de exclusão com elementos <a> estilizados, injetando o comportamento de clique via onclick diretamente na criação do elemento.
 
@@ -71,4 +71,4 @@ Correção: Implementei o push({order: newOrder, table: newTable}) para garantir
 Desenvolvido por Vytor Rodrigues 🚀
 Junior Developer | Estudante de ADS
 
-- git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+- git clone [https://github.com/Vytorrodrigues/Lista-de-Pedidos-Churrascaria.git]
